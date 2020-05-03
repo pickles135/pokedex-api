@@ -15,4 +15,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/1')
     console.log(data);
     mainScreen.classList.remove('hide');
     pokeName.textContent = data['name'];
+    pokeId.textContent = data['id'];
   })
