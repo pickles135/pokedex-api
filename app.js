@@ -21,5 +21,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/1')
 
 
     const dataTypes = data['types'];
-    console.log(dataTypes)
+    pokeTypeOne.textContent = dataTypes[0]['type']['name'];
   })
