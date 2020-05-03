@@ -25,6 +25,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/4')
     const dataSecondType = dataTypes[1];
     pokeTypeOne.textContent = dataFirstType['type']['name'];
     if(dataSecondType) {
+      pokeTypeTwo.classList.remove('remove');
       pokeTypeTwo.textContent = dataSecondType['type']['name'];
     } else {
       pokeTypeTwo.classList.add('hide');
