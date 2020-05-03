@@ -24,4 +24,9 @@ fetch('https://pokeapi.co/api/v2/pokemon/1')
     const dataFirstType = dataTypes[0];
     const dataSecondType = dataTypes[1];
     pokeTypeOne.textContent = dataFirstType['type']['name'];
-  })
+    if(dataSecondType) {
+      pokeTypeTwo.textContent = dataSecondType['type']['name'];
+    } else {
+      pokeTypeTwo.textContent = '';
+    }
+  });
