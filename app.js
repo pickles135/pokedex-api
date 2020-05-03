@@ -17,5 +17,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/1')
     pokeName.textContent = data['name'];
     pokeId.textContent = data['id'];
     pokeWeight.textContent = data['weight'];
+    pokeHeight.textContent = data['height'];
     
   })
