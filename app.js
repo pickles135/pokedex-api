@@ -27,6 +27,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/4')
     if(dataSecondType) {
       pokeTypeTwo.textContent = dataSecondType['type']['name'];
     } else {
+      pokeTypeTwo.classList.add('hide');
       pokeTypeTwo.textContent = '';
     }
   });
