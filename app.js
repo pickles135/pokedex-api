@@ -15,6 +15,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/89')
     console.log(data);
 
     mainScreen.classList.remove('normal');
+    mainScreen.classList.remove('fighting');
 
     const dataTypes = data['types'];
     const dataFirstType = dataTypes[0];
