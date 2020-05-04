@@ -33,4 +33,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/4')
     }
 
     pokeFrontImage.src = data['sprites']['front_default'];
+    pokeBackImage.src = data['sprites']['back_default'];
   });
