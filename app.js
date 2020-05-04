@@ -9,10 +9,13 @@ const pokeTypeTwo = document.querySelector('.poke-type-two');
 const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 
-fetch('https://pokeapi.co/api/v2/pokemon/2')
+fetch('https://pokeapi.co/api/v2/pokemon/89')
   .then(res => res.json())
   .then(data => {
     console.log(data);
+
+    mainScreen.classList.remove('normal');
+
     const dataTypes = data['types'];
     const dataFirstType = dataTypes[0];
     const dataSecondType = dataTypes[1];
