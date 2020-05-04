@@ -24,7 +24,8 @@ fetch('https://pokeapi.co/api/v2/pokemon/2')
       pokeTypeTwo.classList.add('hide');
       pokeTypeTwo.textContent = '';
     }
-
+    
+    mainScreen.classList.add(dataFirstType['type']['name']);
     mainScreen.classList.remove('hide');
     pokeName.textContent = data['name'];
     pokeId.textContent = data['id'];
