@@ -9,8 +9,19 @@ const pokeTypeTwo = document.querySelector('.poke-type-two');
 const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 
-//Functions 
+//Constants and Variables
+const TYPES = [
+  'normal', 'fighting', 'flying',
+  'poison', 'ground', 'rock',
+  'bug', 'ghost', 'steel',
+  'fire', 'water', 'grass',
+  'electric', 'psychic', 'ice',
+  'dragon', 'dark', 'fairy',
+];
 
+
+
+//Functions 
 const resetScreen = () => {
   mainScreen.classList.remove('normal');
   mainScreen.classList.remove('fighting');
