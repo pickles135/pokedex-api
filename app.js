@@ -23,12 +23,9 @@ const TYPES = [
 
 //Functions 
 const resetScreen = () => {
-  mainScreen.classList.remove('normal');
-  mainScreen.classList.remove('fighting');
-  mainScreen.classList.remove('')
-  
-
-
+  for(const type of TYPES) {
+    mainScreen.classList.remove(type);
+  };
 };
 
 fetch('https://pokeapi.co/api/v2/pokemon/89')
