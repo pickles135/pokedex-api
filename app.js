@@ -23,6 +23,7 @@ const TYPES = [
 
 //Functions 
 const resetScreen = () => {
+  mainScreen.classList.remove('hide');
   for(const type of TYPES) {
     mainScreen.classList.remove(type);
   };
@@ -47,7 +48,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/89')
     }
     
     mainScreen.classList.add(dataFirstType['type']['name']);
-    mainScreen.classList.remove('hide');
     pokeName.textContent = data['name'];
     pokeId.textContent = data['id'];
     pokeWeight.textContent = data['weight'];
