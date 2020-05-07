@@ -42,7 +42,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/89')
     pokeTypeOne.textContent = capitalize(dataFirstType['type']['name']);
     if(dataSecondType) {
       pokeTypeTwo.classList.remove('hide');
-      pokeTypeTwo.textContent = dataSecondType['type']['name'];
+      pokeTypeTwo.textContent = capitalize(dataSecondType['type']['name']);
     } else {
       pokeTypeTwo.classList.add('hide');
       pokeTypeTwo.textContent = '';
