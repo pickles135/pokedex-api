@@ -34,7 +34,6 @@ const resetScreen = () => {
 fetch('https://pokeapi.co/api/v2/pokemon/89')
   .then(res => res.json())
   .then(data => {
-    console.log(data);
     resetScreen()
 
     const dataTypes = data['types'];
