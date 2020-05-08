@@ -31,7 +31,7 @@ const resetScreen = () => {
   };
 };
 
-fetch('https://pokeapi.co/api/v2/pokemon/89')
+fetch('https://pokeapi.co/api/v2/pokemon/1')
   .then(res => res.json())
   .then(data => {
     resetScreen()
@@ -50,7 +50,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/89')
     
     mainScreen.classList.add(dataFirstType['type']['name']);
     pokeName.textContent = capitalize(data['name']);
-    pokeId.textContent = data['id'];
+    pokeId.textContent = '#' + data['id'];
     pokeWeight.textContent = data['weight'];
     pokeHeight.textContent = data['height'];
 
