@@ -10,6 +10,8 @@ const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 const pokeListItems = document.querySelectorAll('.list-item');
 
+console.log(pokeListItems);
+
 //Constants and Variables
 const TYPES = [
   'normal', 'fighting', 'flying',
@@ -66,5 +68,9 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
     .then(data => {
       console.log(data);
       const { results } = data;
-      console.log(results);
+ 
+      for(let i = 0; i < pokeListItems.length; i++) {
+        const pokeListItem = pokeListItems[i];
+      }
+
     });
