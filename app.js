@@ -60,3 +60,10 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
   });
 
   //Fetches data for right side of screen
+  fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      const results = data['results'];
+      console.log(results);
+    });
