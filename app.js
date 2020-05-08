@@ -50,7 +50,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/1')
     
     mainScreen.classList.add(dataFirstType['type']['name']);
     pokeName.textContent = capitalize(data['name']);
-    pokeId.textContent = '#' + data['id'];
+    pokeId.textContent = '#' + data['id'].toString().padStart(3, '0');
     pokeWeight.textContent = data['weight'];
     pokeHeight.textContent = data['height'];
 
