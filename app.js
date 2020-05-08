@@ -31,7 +31,7 @@ const resetScreen = () => {
   };
 };
 
-fetch('https://pokeapi.co/api/v2/pokemon/1')
+fetch('https://pokeapi.co/api/v2/pokemon/250')
   .then(res => res.json())
   .then(data => {
     resetScreen()
