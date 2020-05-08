@@ -8,6 +8,7 @@ const pokeTypeOne = document.querySelector('.poke-type-one');
 const pokeTypeTwo = document.querySelector('.poke-type-two');
 const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
+const pokeListItems = document.querySelectorAll('.list-item');
 
 //Constants and Variables
 const TYPES = [
