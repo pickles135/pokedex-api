@@ -31,6 +31,7 @@ const resetScreen = () => {
   };
 };
 
+// Fetches data for left side of pokedex.
 fetch('https://pokeapi.co/api/v2/pokemon/250')
   .then(res => res.json())
   .then(data => {
@@ -57,3 +58,10 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
     pokeFrontImage.src = data['sprites']['front_default'] || '';
     pokeBackImage.src = data['sprites']['back_default'] || '';
   });
+
+  //Fetches data for right side of screen
+  fetch('https://pokeapi.co/api/v2/pokemon/')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
