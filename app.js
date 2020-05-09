@@ -85,3 +85,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
       };
         
     });
+
+    //Adding Event Listener
+    
