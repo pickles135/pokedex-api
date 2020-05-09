@@ -87,4 +87,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
     });
 
     //Adding Event Listener
-    
+    leftButton.addEventListener('click', );
+    rightButton.addEventListener('click', );
