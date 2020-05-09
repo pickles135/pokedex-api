@@ -9,6 +9,8 @@ const pokeTypeTwo = document.querySelector('.poke-type-two');
 const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 const pokeListItems = document.querySelectorAll('.list-item');
+const leftButton = document.querySelector('.left-button');
+
 
 console.log(pokeListItems);
 
@@ -80,6 +82,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
         } else {
           pokeListItem.textContent = '';
         }
-      }
+      };
         
     });
