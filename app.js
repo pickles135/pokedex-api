@@ -36,6 +36,10 @@ const resetScreen = () => {
   };
 };
 
+const handleRightButtonClick = () => {
+
+};
+
 // Fetches data for left side of pokedex.
 fetch('https://pokeapi.co/api/v2/pokemon/250')
   .then(res => res.json())
@@ -87,5 +91,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
     });
 
     //Adding Event Listener
-    leftButton.addEventListener('click', );
-    rightButton.addEventListener('click', );
+    // leftButton.addEventListener('click', );
+    
