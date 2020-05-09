@@ -75,7 +75,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
         const { name } = resultData;
         
         if (resultData) {
-          pokeListItem.textContent = name; 
+          pokeListItem.textContent = capitalize(name); 
         } else {
           pokeListItem.textContent = '';
         }
