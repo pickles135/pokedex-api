@@ -76,9 +76,9 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
       }
 
       if (resultData) {
-
+        pokeListItem.textContent = name; 
       } else {
-
+        pokeListItem.textContent = '';
       }
 
     });
