@@ -72,9 +72,9 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
       for(let i = 0; i < pokeListItems.length; i++) {
         const pokeListItem = pokeListItems[i];
         const resultData = results[i]
-        const { name, url } = resultData;
         
         if (resultData) {
+          const { name, url } = resultData;
           pokeListItem.textContent = capitalize(name); 
         } else {
           pokeListItem.textContent = '';
