@@ -21,7 +21,8 @@ const TYPES = [
   'electric', 'psychic', 'ice',
   'dragon', 'dark', 'fairy',
 ];
-
+let prevUrl = '';
+let nextUrl = '';
 
 
 //Functions 
