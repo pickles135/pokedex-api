@@ -71,7 +71,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
   fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
     .then(res => res.json())
     .then(data => {
-      const { results } = data;
+      const { results, prev, next } = data;
  
       for(let i = 0; i < pokeListItems.length; i++) {
         const pokeListItem = pokeListItems[i];
