@@ -66,7 +66,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
   fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       const { results } = data;
  
       for(let i = 0; i < pokeListItems.length; i++) {
@@ -77,7 +76,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
           const { name, url } = resultData;
           pokeListItem.textContent = capitalize(name); 
           const urlArray = url.split('/');
-          console.log(urlArray);
+          const id = urlArray[urlArray.length - 2];
         } else {
           pokeListItem.textContent = '';
         }
