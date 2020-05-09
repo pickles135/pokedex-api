@@ -10,7 +10,7 @@ const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 const pokeListItems = document.querySelectorAll('.list-item');
 const leftButton = document.querySelector('.left-button');
-
+const rightButton = document.querySelector('.right-button');
 
 console.log(pokeListItems);
 
