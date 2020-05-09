@@ -73,12 +73,12 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
         const pokeListItem = pokeListItems[i];
         const resultData = results[i]
         const { name } = resultData;
+        
+        if (resultData) {
+          pokeListItem.textContent = name; 
+        } else {
+          pokeListItem.textContent = '';
+        }
       }
-
-      if (resultData) {
-        pokeListItem.textContent = name; 
-      } else {
-        pokeListItem.textContent = '';
-      }
-
+        
     });
