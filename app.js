@@ -12,8 +12,6 @@ const pokeListItems = document.querySelectorAll('.list-item');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 
-console.log(pokeListItems);
-
 //Constants and Variables
 const TYPES = [
   'normal', 'fighting', 'flying',
@@ -36,8 +34,8 @@ const resetScreen = () => {
   };
 };
 
-const handleRightButtonClick = () => {
-
+const handleRightButtonClick = (e) => {
+  console.log(e);
 };
 
 // Fetches data for left side of pokedex.
@@ -92,4 +90,4 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
 
     //Adding Event Listener
     // leftButton.addEventListener('click', );
-    
+    rightButton.addEventListener('click', handleRightButtonClick);
