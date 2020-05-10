@@ -74,7 +74,11 @@ const handleRightButtonClick = () => {
 
 const handleListItemClick = (e) => {
   if(!e.target) return;
-  console.log(e.target);
+
+  const listItem = e.target;
+  if(!listItem.textContent) return;
+
+  console.log(listItem.textContent);
 }
 
 
