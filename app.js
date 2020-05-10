@@ -104,6 +104,10 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
 //Adding Event Listener
 leftButton.addEventListener('click', handleLeftButtonClick);
 rightButton.addEventListener('click', handleRightButtonClick);
+for(const pokeListItem of pokeListItems) {
+  pokeListItem.addEventListener('click', handleListItemClick);
+}
+
 
 //Initialize App
 fetchPokeList("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20");
