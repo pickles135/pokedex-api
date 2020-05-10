@@ -83,7 +83,7 @@ const handleListItemClick = (e) => {
 }
 
 const fetchPokeData = id => {
-  fetch('https://pokeapi.co/api/v2/pokemon/250')
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
   .then(res => res.json())
     .then(data => {
       resetScreen()
