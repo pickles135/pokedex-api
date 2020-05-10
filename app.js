@@ -78,7 +78,8 @@ const handleListItemClick = (e) => {
   const listItem = e.target;
   if(!listItem.textContent) return;
 
-  console.log(listItem.textContent);
+  const id = listItem.textContent.split('.')[0];
+  console.log(id);
 }
 
 
