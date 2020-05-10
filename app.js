@@ -108,7 +108,7 @@ const handleListItemClick = (e) => {
   if(!listItem.textContent) return;
 
   const id = listItem.textContent.split('.')[0];
-  console.log(id);
+  fetchPokeData(id);
 }
 
 
@@ -118,7 +118,6 @@ rightButton.addEventListener('click', handleRightButtonClick);
 for(const pokeListItem of pokeListItems) {
   pokeListItem.addEventListener('click', handleListItemClick);
 }
-
 
 //Initialize App
 fetchPokeList("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20");
