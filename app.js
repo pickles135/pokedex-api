@@ -60,11 +60,18 @@ const fetchPokeList = url => {
   });
 };
 
+const handleLeftButtonClick = () => {
+  if(prevUrl) {
+    fetchPokeList(prevUrl);
+  }  
+};
+
 const handleRightButtonClick = () => {
   if(nextUrl) {
     fetchPokeList(nextUrl);
   }
 };
+
 
 // Fetches data for left side of pokedex.
 fetch('https://pokeapi.co/api/v2/pokemon/250')
