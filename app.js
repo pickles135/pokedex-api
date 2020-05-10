@@ -72,6 +72,10 @@ const handleRightButtonClick = () => {
   }
 };
 
+const handleListItemClick = (e) => {
+  console.log(e.target);
+}
+
 
 // Fetches data for left side of pokedex.
 fetch('https://pokeapi.co/api/v2/pokemon/250')
