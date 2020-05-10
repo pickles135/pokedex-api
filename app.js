@@ -73,6 +73,7 @@ const handleRightButtonClick = () => {
 };
 
 const handleListItemClick = (e) => {
+  if(!e.target) return;
   console.log(e.target);
 }
 
