@@ -35,8 +35,33 @@ const resetScreen = () => {
   };
 };
 
-const handleRightButtonClick = (e) => {
-  console.log(e);
+const handleRightButtonClick = () => {
+
+};
+
+const fetchPokeList = () => {
+  fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+    .then(res => res.json())
+    .then(data => {
+      const { results, previous, next } = data;
+      prevUrl = previous;
+      nextUrl = next; 
+  
+      for(let i = 0; i < pokeListItems.length; i++) {
+        const pokeListItem = pokeListItems[i];
+        const resultData = results[i]
+        
+        if (resultData) {
+          const { name, url } = resultData;
+          const urlArray = url.split('/');
+          const id = urlArray[urlArray.length - 2];
+          pokeListItem.textContent = id + '. ' + capitalize(name); 
+        } else {
+          pokeListItem.textContent = '';
+        }
+      };
+        
+    });
 };
 
 // Fetches data for left side of pokedex.
@@ -67,30 +92,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/250')
     pokeBackImage.src = data['sprites']['back_default'] || '';
   });
 
-  //Fetches data for right side of screen
-  fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
-    .then(res => res.json())
-    .then(data => {
-      const { results, previous, next } = data;
-      prevUrl = previous;
-      nextUrl = next; 
- 
-      for(let i = 0; i < pokeListItems.length; i++) {
-        const pokeListItem = pokeListItems[i];
-        const resultData = results[i]
-        
-        if (resultData) {
-          const { name, url } = resultData;
-          const urlArray = url.split('/');
-          const id = urlArray[urlArray.length - 2];
-          pokeListItem.textContent = id + '. ' + capitalize(name); 
-        } else {
-          pokeListItem.textContent = '';
-        }
-      };
-        
-    });
-
-    //Adding Event Listener
-    // leftButton.addEventListener('click', );
-    rightButton.addEventListener('click', handleRightButtonClick);
+//Adding Event Listener
+// leftButton.addEventListener('click', );
+rightButton.addEventListener('click', handleRightButtonClick);
